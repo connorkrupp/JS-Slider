@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS-Slider</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+	<div class="slider">
+		<ul>
+			<li><img src="img/1.png" alt="one"></li>
+			<li><img src="img/2.png" alt="two"></li>
+			<li><img src="img/3.png" alt="three"></li>
+			<li><img src="img/4.png" alt="four"></li>
+		</ul>
+	</div>
+
+	<a href="javascript:sliders[0].goToNext()">Click Me</a>
+
+	<script>
+	var sliders = []
+	$('.slider').each(function() {
+		sliders.push(new Slider(this))
+	})
+
+	</script>
+</body>
+</html>
